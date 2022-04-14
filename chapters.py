@@ -44,15 +44,15 @@ def chapterize(path, title, parts):
 if __name__ == "__main__":
     try:
         mode = sys.argv[1]
-    except:
+    except IndexError:
         print(
-            "usage: python3 chapters.py [-m Manual Mode, one directory at a time] [-a Automatic mode, all subdirectories] [-l List folders without covers]"
+            "usage: python3 chapters.py [-m Manual Mode, one directory at a time] [-a Automatic mode, all subdirectories] [-l List folders without chapters] <audiobook_directory>"
         )
         exit()
     if mode == "-m":
         try:
             folder = sys.argv[2]
-        except:
+        except IndexError:
             print("chapters.py -m <Audiobook directory>")
             exit()
         parts = 0
