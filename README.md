@@ -1,7 +1,9 @@
 ## Overdrive Chapterizer
 Simple Python script to extract chapters from Overdrive MP3 tracks into a .txt file for processing by [m4b-tool](https://github.com/sandreas/m4b-tool) or equivalent.
 ## Usage
-`python3 chapters.py [-m Manual Mode, one directory at a time] [-a Automatic mode, all subdirectories] [-l List folders without chapters] <audiobook_directory>`
+```
+python3 chapters.py [-m Manual Mode, one directory at a time] [-a Automatic mode, all subdirectories] [-l List folders without chapters] <audiobook_directory>
+```
 
 In manual mode, supply one directory and the program will look one layer deep for MP3 files. If it finds any sharing names but named for parts, it will iterate through them, extracting chapters and putting them into a chapters.txt file in the same directory.
 
