@@ -35,7 +35,7 @@ def chapterize(path, title, parts):
 
                 duration = h + ":" + m + ":" + s + "." + ms
                 # Filter out weird Overdrive parts of chapters
-                if not re.findall("([(]\d|continued)", name):
+                if not re.findall("([(]\d|[cC]ontinued)", name):
                     f.write(duration + "    " + name + "\n")
 
             length += file.info.length
